@@ -481,47 +481,28 @@ span.close-btn:hover {
     }
 }
 
+
+/* Animación de latir */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta el tamaño del texto como un latido */
+    }
+}
+
+/* Estilo del texto */
 .romantic-quote {
-    font-size: 1.7em;
-    font-weight: 500;
-    color: #ff0000; /* Rojo brillante para el texto */
+    font-size: 24px;
+    font-weight: bold;
+    color: #c40d0d; /* Un color de texto romántico */
     text-align: center;
-    font-family: 'Arial', sans-serif;
-    animation: shineText 3s infinite, moveText 4s ease-in-out infinite;
+    animation: heartbeat 1s ease-in-out infinite; /* Aplicamos la animación */
 }
 
-@keyframes shineText {
-    0% {
-        text-shadow: 0 0 15px #ff4d4d, 0 0 30px #ff4d4d, 0 0 45px #ff4d4d, 0 0 60px #ff1a1a;
-        color: #ff4d4d;
-    }
-    50% {
-        text-shadow: 0 0 25px #ff4d4d, 0 0 35px #ff4d4d, 0 0 50px #ff4d4d, 0 0 75px #ffffff;
-        color: #ffffff;
-    }
-    100% {
-        text-shadow: 0 0 15px #ff4d4d, 0 0 30px #ff4d4d, 0 0 45px #ff4d4d, 0 0 60px #ff1a1a;
-        color: #ff4d4d;
-    }
-}
 
-@keyframes moveText {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(8px);
-    }
-    50% {
-        transform: translateX(0);
-    }
-    75% {
-        transform: translateX(-8px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
+
 
 
 /* Estilo para el texto con la animación de latido */

@@ -231,7 +231,7 @@ span.close-btn:hover {
     /* Modal */
     .modal-content {
         width: 90%; /* Hacer que el modal ocupe el 90% del ancho en móviles */
-        max-height: 50vh; /* Limitar la altura en dispositivos pequeños */
+        max-height: 60vh; /* Limitar la altura en dispositivos pequeños */
         margin-top: 10% auto; /* Ajustar el margen superior para hacerlo más pequeño */
         padding: 10px; /* Reducir el padding */
     }
