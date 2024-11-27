@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="no.css">
+    <title>Seras mia...</title>
+</head>
+<body>
+    <!-- Audio con loop -->
+    <iframe id="music-frame" src="audio-player.html" style="display:none;"></iframe>
+
+    <div class="container">
+        <div class="tenor-gif-embed" data-postid="21443416" data-share-method="host" data-aspect-ratio="0.95625" data-width="100%">
+            <a href="https://tenor.com/view/white-cat-cats-hell-yeah-cat-gif-21443416">White Cat Cats GIF</a>
+            from <a href="https://tenor.com/search/white+cat-gifs">White Cat GIFs</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <h1>Seras mía a las buenas o a las malas 😈</h1>
+        <div class="btn">
+            <a href="si.html">SI</a>
+            <a href="#" id="btn-random">NO</a>
+        </div>
+
+        <div id="message">
+            <p>¡Oh no! 😱 Pensé que dirías que "Sí"... Pero no te preocupes, ¡yo también soy experto en convencer! 😏💕</p>
+        </div>
+    </div>
+
+    <!-- Modal que aparece cuando se hace clic en "SI" -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <p>¡Sabía que dirías que sí! 😘💖</p>
+            <p>Te amo mucho mi princesa hermosa, y me hace muy feliz que seas mía solo mia mi osita preciosa. 🥰 te amo mi amor 💖</p>
+            <button id="accept-btn">Aceptar</button>
+        </div>
+    </div>
+
+    <script>
+        // Funcionalidad cuando presionas el botón "NO"
+        document.getElementById('btn-random').addEventListener('click', function() {
+            // Desplazar el botón NO fuera de la vista y hacerlo invisible
+            this.classList.add('hidden');
+
+            // Mostrar mensaje divertido después de hacer clic en NO
+            setTimeout(function() {
+                document.getElementById('message').style.display = 'block'; // Muestra el mensaje
+            }, 500);
+        });
+
+        // Funcionalidad cuando presionas el botón "SI"
+        document.querySelector('a[href="si.html"]').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevenir la acción de redirección por defecto
+
+            // Mostrar el modal
+            setTimeout(function() {
+                document.getElementById('confirmation-modal').style.display = 'flex'; // Mostrar el modal
+            }, 500);
+        });
+
+        // Funcionalidad del botón "Aceptar" del modal
+        document.getElementById('accept-btn').addEventListener('click', function() {
+            // Cerrar el modal
+            document.getElementById('confirmation-modal').style.display = 'none';
+
+            // Redirigir a si.html
+            window.location.href = 'si.html';
+        });
+    </script>
+        <script src="script.js"></script>
+</body>
+</html>

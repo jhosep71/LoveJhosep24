@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Te gustaria salir conmigo?</title>
+</head>
+<body>
+
+    <!-- Música de fondo -->
+    <audio id="background-music" loop>
+        <source src="music/Mi vida eres tu.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <div class="container">
+        <!-- Botón animado primero -->
+        <button id="play-button">🎵 Presiona para escuchar 🎵</button>
+        <div id="animated-text">¡Haz clic para sorprenderte! 😍</div>
+        <div class="tenor-gif-embed" data-postid="2871482820979272488" data-share-method="host" data-aspect-ratio="1.28351" data-width="250%">
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <h1 class="love-heartbeat">Mi osita Kiara, eres el amor que siempre soñé, la razón de mis sonrisas y mi fortaleza en cada paso… 💖</h1>
+        <h1 class="love-heartbeat">"❤️ ¿Te gustaría ser no solo mi presente, sino también mi futuro, mi compañera de vida, y la persona con la que construiría cada uno de mis sueños? ✨"</h1>
+        <p>✨ Desde el instante en que cruzaste mi camino, mi mundo cobró un nuevo sentido. 🌍 Tu risa 😂 ilumina mis días, tu mirada 👀 llena mi alma de calma, y cada momento contigo me hace sentir completo. ❤️‍🔥 No es solo un "te amo", es un "te necesito" en cada latido de mi corazón. 💓💫</p>
+        <p>🌈 "Si decides dar este paso conmigo, prometo ser más que tu compañero: seré tu refugio en los días grises, tu apoyo en cada desafío, y la persona que siempre verá en ti el más hermoso de los sueños. 🌟 *No importa dónde nos lleve la vida, estaré a tu lado, amándote con cada latido de mi corazón. ❤️ Porque eres mi todo, mi destino, y la mujer que quiero hacer feliz cada día de mi vida. 💖💕</p>
+        <div class="btn">
+            <a href="si.html">SI</a>
+            <a href="no1.html">NO</a>
+        </div>
+        <p class="romantic-quote">
+            "Desde que llegaste a mi vida, cada instante se ha convertido en un motivo para sonreír. Eres mi presente, mi futuro y la razón de mi felicidad." 💖 TE AMO MI OSITA PRECIOSA 💖
+        </p>
+    </div>
+    <!-- Cita romántica debajo -->
+   
+
+    <script>
+        const music = document.getElementById('background-music');
+        const playButton = document.getElementById('play-button');
+        const animatedText = document.getElementById('animated-text');
+        const romanticContent = document.getElementById('romantic-content');
+
+        playButton.addEventListener('click', () => {
+            music.play();
+            playButton.style.display = 'none'; // Ocultar botón después de iniciar
+            animatedText.style.display = 'none'; // Ocultar texto animado
+            romanticContent.style.display = 'block'; // Mostrar contenido romántico
+        });
+    </script>
+
+</body>
+</html>

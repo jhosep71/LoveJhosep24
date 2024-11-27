@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="si.css">
+    <title>lo sabia te amo!</title>
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="music/te amo.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <div class="container">
+        <h1 class="heartbeat">💖 Mi vida cobra sentido gracias a ti, mi princesa Kiara💖 te amo 💖</h1>
+        <h2 class="fade-in">Desde el momento en que llegaste a mi vida, todo ha tenido más sentido. Eres mi alegría, mi refugio y la razón por la que cada día vale la pena. Tu amor llena mi alma y cada día me haces sentir el hombre más afortunado. Eres mi sol, mi estrella, y no hay palabras suficientes para describir lo mucho que te amo. 🌟❤️</h2>
+
+         <!-- Slider de fotos hermosas -->
+         <div class="slider-container">
+            <div class="slider">
+                <div class="slide"><img src="img/1.jpg" alt="Imagen 1"></div>
+                <div class="slide"><img src="img/2.jpg" alt="Imagen 2"></div>
+                <div class="slide"><img src="img/3.jpg" alt="Imagen 3"></div>
+                <div class="slide"><img src="img/4.jpg" alt="Imagen 4"></div>
+                <!-- Añadir más imágenes según sea necesario -->
+            </div>
+        
+            <!-- Botones para navegar entre las imágenes -->
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <div class="romantic-quote-animation">
+            💖 "Desde que llegaste a mi vida, todo tiene un propósito. Eres mi sol en los días grises, mi razón para sonreír sin parar, y mi amor eterno. Te amo con todo mi ser mi Kiarita hermosa." 💖
+        </div>
+
+        <div class="gif-container fade-in">
+            <div class="tenor-gif-embed" data-postid="12345678" data-share-method="host" data-aspect-ratio="1.3" data-width="100%"></div>
+            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        </div>
+         <!-- Botón para mostrar el mensaje sorpresa -->
+    <!-- Botón para mostrar el modal -->
+<button class="surprise-btn fade-in" onclick="mostrarModalSorpresa()">💌 Descubre una Sorpresa 💌</button>
+
+
+<!-- Modal Sorpresa -->
+<div id="modal-sorpresa" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="cerrarModalSorpresa()">&times;</span>
+        <h2>🌟 Mi amor, mi Kiara 🌟</h2>
+        <p>Mi osita preciosa, no hay palabras que puedan expresar lo que siento por ti, porque lo que vivimos juntos es más grande que cualquier cosa que pueda decir. Eres la razón por la que sonrío todos los días, la fuerza que me impulsa y la calma en mis noches. Tu belleza, por dentro y por fuera, ilumina mi vida de una manera que nunca imaginé. Gracias por ser mi compañera, por llenar mi corazón de amor y por darme la oportunidad de amarte con cada latido. Eres mi todo, mi razón de ser, y te amo más de lo que las palabras pueden expresar. 💖</p>
+        <button class="close-btn" onclick="cerrarModalSorpresa()">Salir</button>
+    </div>
+</div>
+<!-- Contenedor para los corazones -->
+<div id="hearts-container"></div>
+    </div>
+    <script src="si.js"></script>
+</body>
+</html>

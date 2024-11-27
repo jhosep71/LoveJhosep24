@@ -1,0 +1,597 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    background: linear-gradient(to bottom right, #e992af, #f5b2cd, #ff4a7b);
+}
+ /* Animación de fondo degradado */
+ @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: 20px;
+    text-align: center;
+}
+
+.container .tenor-gif-embed {
+    display: flex;
+    max-width: 200px;
+}
+
+.container .btn {
+    display: flex;
+    gap: 25px;
+}
+
+.btn a {
+    text-decoration: none; /* Eliminar subrayado */
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(45deg, #f70c81, #ff1493, #ff77ff); /* Gradiente de colores brillantes */
+    box-shadow: 0 0 15px rgb(236, 8, 8), 0 0 25px rgba(243, 24, 71, 0.945); /* Sombras brillantes */
+    text-align: center;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+
+h1 {
+    color: #ff2b4b;
+    font-size: 2.5rem;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.btn a {
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background: #ff6b81;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.btn a:hover {
+    background: #ff4757;
+}
+
+/* Estilos del botón de reproducir música */
+#play-button {
+    font-size: 1.5em;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ff6b81, #ff4757);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    outline: none;
+    animation: heartbeat 1.5s infinite;
+    transition: transform 0.3s ease, background 0.3s ease;
+    max-width: 80%;
+}
+
+#play-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff4757, #ff6b81);
+}
+
+/* Efecto de latido */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Texto animado */
+#animated-text {
+    font-size: 1.3em;
+    margin-top: 10px;
+    color: #ffffff;
+    animation: fadeIn 2s infinite alternate;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+ /* Responsividad */
+ @media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    #play-button {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+
+    #animated-text {
+        font-size: 1em;
+    }
+    .romantic-quote {
+        font-size: 1.2rem; /* Reducir tamaño en tabletas */
+    }
+    .slider img {
+        height: 200px; /* Reducir la altura de las imágenes en pantallas más pequeñas */
+    }
+    .slider-container {
+        max-width: 90%; /* Contenedor más pequeño en tabletas */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    #play-button {
+        font-size: 1.4em;
+        padding: 8px 16px;
+    }
+
+    #animated-text {
+        font-size: 0.9em;
+    }
+    .romantic-quote {
+        font-size: 0.9rem; /* Reducir tamaño en móviles */
+        padding: 10px;  /* Ajustar el espacio interno */
+    }
+    .slider-container {
+        max-width: 80%; /* Hacer el contenedor aún más pequeño en móviles */
+        height: 70%;
+        
+    }
+
+    .slider img {
+        height: 150px; /* Ajustar la altura de las imágenes para dispositivos pequeños */
+    }
+
+    .prev, .next {
+        font-size: 14px; /* Hacer los botones más pequeños en móviles */
+        padding: 6px;
+    }
+}
+
+ /* Estilo para la cita romántica */
+
+/* Animación suave para la cita */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Título principal con animación de latido */
+.heartbeat {
+    font-size: 2.5em;
+    color: #ff69b4;
+    animation: heartbeat 1.5s infinite;
+}
+
+/* Subtítulo con animación de aparición suave */
+h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #ff2b2b;
+}
+
+/* Quote romántico */
+.romantic-quote {
+    font-size: 1.2em;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* Contenedor de video */
+.video-container {
+    margin: 20px 0;
+}
+
+video {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* GIF container */
+.gif-container {
+    margin: 20px 0;
+}
+
+/* Animación de aparición suave */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Keyframes para fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de latido */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+/* Estilo del modal (fondo oscuro) */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con transparencia */
+}
+
+/* Estilo del contenido del modal */
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Animación del modal */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo del botón de cerrar */
+.close-btn {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #ff85c2;
+}
+
+/* Estilo de la X para cerrar */
+span.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #555;
+}
+
+span.close-btn:hover {
+    color: #ff69b4;
+}
+
+/* Estilo general del botón de sorpresa */
+.surprise-btn {
+    background: linear-gradient(45deg, #ff007f, #ff7300); /* Color de fondo atractivo */
+    color: white; /* Color del texto */
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    animation: pulsar 1.5s infinite; /* Animación de pulsación */
+    position: relative; /* Asegura que el botón sea visible */
+    z-index: 10; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+/* Efecto al pasar el ratón por encima */
+.surprise-btn:hover {
+    background: linear-gradient(45deg, #ff7300, #ff007f); /* Cambio de colores al pasar el ratón */
+    transform: scale(1.1); /* Aumento de tamaño al pasar el ratón */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+/* Animación de pulsación */
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Pulsación del botón */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilo de cuando se presiona el botón */
+.surprise-btn:active {
+    transform: scale(1.05); /* Reducción de tamaño al presionar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+}
+
+/* Asegurarse de que el botón sea visible en todos los tamaños */
+.surprise-btn {
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Estilos para el Slider */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 80%; /* Puedes ajustarlo según prefieras */
+    height: 300px; /* Altura fija para pantallas grandes */
+}   
+
+.slider {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Deslizar las imágenes con una transición suave */
+}
+
+.slide {
+    min-width: 100%; /* Hace que cada imagen ocupe todo el contenedor */
+    transition: opacity 1s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain; /* Ajusta la imagen para que se vea completa sin deformarse */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Estilo opcional */
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Aseguramos que los botones estén encima de las imágenes */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.love-heartbeat {
+    font-size: 1.6em; /* Tamaño de la fuente */
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* Fuentes limpias y modernas */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para un toque suave */
+    animation: lovePulse 2s infinite ease-in-out;
+}
+
+@keyframes lovePulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(1.05);
+        opacity: 1.1;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    75% {
+        transform: scale(1.05);
+        opacity: 1.1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.romantic-quote {
+    font-size: 1.7em;
+    font-weight: 500;
+    color: #ff0000; /* Rojo brillante para el texto */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    animation: shineText 3s infinite, moveText 4s ease-in-out infinite;
+}
+
+@keyframes shineText {
+    0% {
+        text-shadow: 0 0 15px #ff4d4d, 0 0 30px #ff4d4d, 0 0 45px #ff4d4d, 0 0 60px #ff1a1a;
+        color: #ff4d4d;
+    }
+    50% {
+        text-shadow: 0 0 25px #ff4d4d, 0 0 35px #ff4d4d, 0 0 50px #ff4d4d, 0 0 75px #ffffff;
+        color: #ffffff;
+    }
+    100% {
+        text-shadow: 0 0 15px #ff4d4d, 0 0 30px #ff4d4d, 0 0 45px #ff4d4d, 0 0 60px #ff1a1a;
+        color: #ff4d4d;
+    }
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(8px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(-8px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* Estilo para el texto con la animación de latido */
+.final-chance {
+    font-size: 1.9rem;
+    color: #c90a0a; /* Color rosado para el texto */
+    font-weight: bold;
+    text-align: center;
+    animation: heartbeat 1.5s infinite; /* Aplicar la animación de latido */
+}
+
+/* Definición de la animación "heartbeat" */
+@keyframes heartbeat {
+    0% {
+        transform: scale(1); /* Tamaño original */
+    }
+    25% {
+        transform: scale(1.1); /* Aumentar el tamaño */
+    }
+    50% {
+        transform: scale(1); /* Volver al tamaño original */
+    }
+    75% {
+        transform: scale(1.1); /* Volver a aumentar el tamaño */
+    }
+    100% {
+        transform: scale(1); /* Volver al tamaño original */
+    }
+}
+
+
+/* Estilo para el título con animación */
+.funny-title {
+    font-size: 1.8rem; /* Tamaño grande para llamar la atención */
+    font-weight: bold;
+    text-align: center;
+    color: #ff6347; /* Color naranja brillante */
+    text-transform: uppercase; /* Transformar el texto a mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    animation: bounceColor 2s infinite, shake 0.5s ease-out; /* Aplicamos dos animaciones */
+    text-shadow: 0 0 10px rgba(255, 99, 71, 0.6), 0 0 20px rgba(255, 99, 71, 0.4); /* Sombra luminosa */
+}
+
+/* Animación de rebote y cambio de color */
+@keyframes bounceColor {
+    0%, 100% {
+        transform: translateY(0); /* Sin desplazamiento */
+        color: #ff6347; /* Naranja brillante */
+    }
+    50% {
+        transform: translateY(-20px); /* Desplazamiento hacia arriba */
+        color: #ff1493; /* Color rosa brillante */
+    }
+}
+
+/* Animación de sacudida */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,249 @@
+
+/* Título principal con animación de latido */
+.heartbeat {
+    font-size: 2.3em;
+    color: #ff69b4;
+    animation: heartbeat 1.5s infinite;
+}
+
+
+
+
+/* Contenedor de video */
+.video-container {
+    margin: 20px 0;
+}
+
+video {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* GIF container */
+.gif-container {
+    margin: 20px 0;
+}
+
+/* Animación de aparición suave */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Keyframes para fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de latido */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Estilo responsivo */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .romantic-quote {
+        font-size: 1em;
+    }
+}
+
+.romantic-quote-animation {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #ff4d4d; /* Color rojo brillante para las letras */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    text-transform: capitalize;
+    animation: moveText 3s ease-in-out infinite;
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* Contenedor de los corazones */
+#hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Los corazones no deben interferir con otros elementos */
+    z-index: 10000; /* Aseguramos que los corazones estén encima del modal */
+    display: none; /* Inicialmente ocultos */
+}
+
+/* Animación de los corazoncitos */
+/* Animación de los corazoncitos */
+/* Animación de los corazoncitos */
+@keyframes heartAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+        transform: translate(var(--x), var(--y)); /* Desplazamos los corazones a la posición aleatoria */
+    }
+}
+
+.heart {
+    position: absolute;
+    font-size: 30px;
+    color: red;
+    animation: heartAnimation 3s infinite;
+    pointer-events: none; /* No interfiere con otros elementos */
+}
+
+/* Media Queries para hacer la animación más adecuada en dispositivos móviles */
+@media (max-width: 768px) {
+    .heart {
+        font-size: 10vw; /* Los corazones serán un poco más grandes en pantallas móviles */
+    }
+    #hearts-container {
+        height: 100vh; /* Ajustamos la altura a la pantalla completa */
+    }
+    
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 480px) {
+    .heart {
+        font-size: 12vw; /* Corazones más grandes en pantallas muy pequeñas */
+    }
+    #hearts-container {
+        height: 100vh; /* Aseguramos que la altura siga siendo la completa */
+    }
+}
+
+/* Modal básico */
+
+/* Opcional: Si quieres que el fondo detrás del modal también se oscurezca un poco más */
+
+/* Estilo de la ventana del modal */
+
+
+
+
+/* Animación del modal */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo del botón de cerrar */
+.close-btn {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #ff85c2;
+}
+
+/* Estilo de la X para cerrar */
+span.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #555;
+}
+
+span.close-btn:hover {
+    color: #ff69b4;
+}
+
+/* Estilos específicos para pantallas móviles */
+@media screen and (max-width: 767px) {
+    /* Modal */
+    .modal-content {
+        width: 90%; /* Hacer que el modal ocupe el 90% del ancho en móviles */
+        max-height: 60vh; /* Limitar la altura en móviles */
+        margin-top: 15% auto; /* Ajustar el margen superior para hacerlo más pequeño */
+        padding: 15px; /* Reducir el padding */
+    }
+
+    /* Botón de cerrar */
+    .close-btn {
+        font-size: 1em; /* Hacer el botón de cerrar más pequeño */
+        padding: 8px 15px; /* Ajustar tamaño */
+    }
+
+    /* X para cerrar */
+    span.close-btn {
+        font-size: 1.2em; /* Hacer la X un poco más pequeña */
+    }
+}
+
+/* Estilos específicos para pantallas con un máximo de 480px */
+@media screen and (max-width: 480px) {
+    /* Modal */
+    .modal-content {
+        width: 90%; /* Hacer que el modal ocupe el 90% del ancho en móviles */
+        max-height: 50vh; /* Limitar la altura en dispositivos pequeños */
+        margin-top: 10% auto; /* Ajustar el margen superior para hacerlo más pequeño */
+        padding: 10px; /* Reducir el padding */
+    }
+
+    /* Botón de cerrar */
+    .close-btn {
+        font-size: 1em; /* Hacer el botón de cerrar más pequeño */
+        padding: 8px 15px; /* Ajustar tamaño */
+    }
+
+    /* X para cerrar */
+    span.close-btn {
+        font-size: 1.2em; /* Hacer la X un poco más pequeña */
+    }
+}
